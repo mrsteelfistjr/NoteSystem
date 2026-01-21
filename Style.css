@@ -1,0 +1,64 @@
+:root {
+  --accent: lime;
+}
+
+body {
+  margin: 0;
+  background: black;
+  color: var(--accent);
+  font-family: monospace;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  border-bottom: 3px solid var(--accent);
+}
+
+.logo {
+  height: 40px;
+  image-rendering: pixelated;
+}
+
+.banner h1 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+}
+
+/* Controls */
+.controls {
+  padding: 15px 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed var(--accent);
+}
+
+button {
+  background: black;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent);
+  color: black;
+}
+
+/* Note area */
+textarea {
+  width: 100%;
+  height: calc(100vh - 160px);
+  background: black;
+  color: var(--accent);
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}

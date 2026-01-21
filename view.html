@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shared Note</title>
+  <style>
+    body {
+      background: black;
+      color: lime;
+      font-family: monospace;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📄 Shared Note</h2>
+<div id="content"></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const note = params.get("note");
+  document.getElementById("content").textContent =
+    decodeURIComponent(note || "No note found.");
+</script>
+
+</body>
+</html>
