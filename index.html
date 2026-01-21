@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>My QR Notes</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
 
@@ -19,6 +20,10 @@
       <option value="retro">Retro</option>
       <option value="white">White</option>
       <option value="blue">Blue</option>
+      <option value="pink">Pink</option>
+      <option value="amber">Amber</option>
+      <option value="purple">Purple</option>
+      <option value="matrix">Matrix</option>
     </select>
   </label>
 
@@ -27,13 +32,28 @@
   <button id="downloadBtn">⬇ Download</button>
   <button id="dictationBtn">🎙 Dictate</button>
   <button id="summarizeBtn">🧠 Summarize</button>
-  <button id="upgradeBtn">💎 Upgrade</button>
+  <button id="unlockBtn">💎 Unlock Premium</button>
 </section>
 
 <div id="columnsContainer"></div>
 
 <h2>Previous Notes</h2>
 <div id="historyContainer"></div>
+
+<!-- Upgrade modal -->
+<div id="upgradeModal" class="modal">
+  <div class="modal-content">
+    <h2>Upgrade to Premium 💎</h2>
+    <ul>
+      <li>Unlimited QR codes</li>
+      <li>Extra themes + animations</li>
+      <li>AI Note Summarizer + Humanizer</li>
+      <li>Columns delete/rename functionality</li>
+    </ul>
+    <div id="paypal-button-container"></div>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
