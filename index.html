@@ -2,44 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Retro Notes</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>My QR Notes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Banner -->
   <header class="banner">
-<img src="Images/Logo.png" alt="Logo" class="logo">
-    <h1>RETRO NOTES</h1>
+    <img src="Images/Logo.png" class="logo">
+    <h1>My QR Notes</h1>
   </header>
 
-  <!-- Controls -->
   <section class="controls">
     <label>
-      Font Size:
-      <input type="range" min="12" max="28" value="16" id="fontSize">
-    </label>
-
-    <label>
       Theme:
-      <select id="theme">
-        <option value="green">Green</option>
-        <option value="amber">Amber</option>
+      <select id="themeSelector">
+        <option value="retro">Retro</option>
+        <option value="white">White</option>
         <option value="blue">Blue</option>
       </select>
     </label>
 
+    <button id="qrBtn">📱 Share via QR</button>
+    <button id="downloadBtn">⬇ Download</button>
     <button id="dictationBtn">🎙 Dictate</button>
-        <button id="downloadBtn">⬇ Download</button>
-        <button id="qrBtn">📱 Share via QR</button>
-        <p id="counter">0 words</p>
-    <button id="saveBtn">SAVE NOTE</button>
+    <button id="unlockBtn">💎 Unlock More QR</button>
   </section>
 
-  <!-- Note Area -->
-  <textarea id="note" placeholder="Type your note here..."></textarea>
+  <textarea id="note" placeholder="Write your note here..."></textarea>
+  <p id="counter">0 words</p>
 
   <script src="script.js"></script>
 </body>

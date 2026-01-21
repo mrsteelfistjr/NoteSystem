@@ -1,21 +1,32 @@
 :root {
-  --accent: lime;
+  --bg-color: black;
+  --text-color: lime;
+  --accent-color: lime;
+  --font-family: monospace;
+  --input-bg: #111;
+  --button-bg: #111;
+  --border-radius: 12px;
+  --shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/* Theme colors will be updated via JS */
 body {
   margin: 0;
-  background: black;
-  color: var(--accent);
-  font-family: monospace;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-/* Banner */
 .banner {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 12px 20px;
-  border-bottom: 3px solid var(--accent);
+  padding: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  background-color: var(--input-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  margin: 10px;
 }
 
 .logo {
@@ -23,42 +34,50 @@ body {
   image-rendering: pixelated;
 }
 
-.banner h1 {
-  font-family: "Press Start 2P", monospace;
-  font-size: 16px;
-}
-
-/* Controls */
 .controls {
-  padding: 15px 20px;
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
-  border-bottom: 1px dashed var(--accent);
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--input-bg);
+  margin: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 
-button {
-  background: black;
-  color: var(--accent);
-  border: 2px solid var(--accent);
+button, select {
+  background-color: var(--button-bg);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
   padding: 6px 10px;
   cursor: pointer;
+  border-radius: var(--border-radius);
+  font-size: 14px;
 }
 
-button:hover {
-  background: var(--accent);
-  color: black;
+button:hover, select:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
 }
 
-/* Note area */
 textarea {
-  width: 100%;
-  height: calc(100vh - 160px);
-  background: black;
-  color: var(--accent);
+  width: calc(100% - 40px);
+  height: calc(100vh - 250px);
+  background-color: var(--input-bg);
+  color: var(--text-color);
   border: none;
   padding: 20px;
   font-size: 16px;
-  resize: none;
+  margin: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   outline: none;
+  resize: none;
 }
+
+#counter {
+  padding: 8px 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
