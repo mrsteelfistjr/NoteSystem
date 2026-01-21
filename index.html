@@ -6,30 +6,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="banner">
-    <img src="Images/Logo.png" class="logo">
-    <h1>My QR Notes</h1>
-  </header>
 
-  <section class="controls">
-    <label>
-      Theme:
-      <select id="themeSelector">
-        <option value="retro">Retro</option>
-        <option value="white">White</option>
-        <option value="blue">Blue</option>
-      </select>
-    </label>
+<header class="banner">
+  <span class="banner-logo">📝</span>
+  <h1>My QR Notes</h1>
+</header>
 
-    <button id="qrBtn">📱 Share via QR</button>
-    <button id="downloadBtn">⬇ Download</button>
-    <button id="dictationBtn">🎙 Dictate</button>
-    <button id="unlockBtn">💎 Unlock More QR</button>
-  </section>
+<section class="controls">
+  <label>
+    Theme:
+    <select id="themeSelector">
+      <option value="retro">Retro</option>
+      <option value="white">White</option>
+      <option value="blue">Blue</option>
+    </select>
+  </label>
 
-  <textarea id="note" placeholder="Write your note here..."></textarea>
-  <p id="counter">0 words</p>
+  <button id="addColumnBtn">➕ Add Column</button>
+  <button id="qrBtn">📱 Share via QR</button>
+  <button id="downloadBtn">⬇ Download</button>
+  <button id="dictationBtn">🎙 Dictate</button>
+  <button id="summarizeBtn">🧠 Summarize</button>
+  <button id="upgradeBtn">💎 Upgrade</button>
+</section>
 
-  <script src="script.js"></script>
+<div id="columnsContainer"></div>
+
+<h2>Previous Notes</h2>
+<div id="historyContainer"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
